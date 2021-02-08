@@ -1,0 +1,14 @@
+{
+  "name": "unit_testing",
+  "version": "1.0.0",
+  "description": "A basic unit testing app using jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ajin Varghese",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
