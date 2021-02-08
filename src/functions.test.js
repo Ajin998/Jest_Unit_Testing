@@ -38,3 +38,13 @@ test("Test for firstName and lastName of the user", () => {
 test("Test for less than value", () => {
   expect(functions.less_than(150, 200)).toBeLessThan(500);
 });
+
+//test for less than or equals
+test("Test for less than equals", () => {
+  expect(functions.less_than(150, 200)).toBeLessThanOrEqual(350);
+});
+
+//Test for Regex
+test("Regex for not containing I in a word", () => {
+  expect("team").not.toMatch(/T/);
+});
