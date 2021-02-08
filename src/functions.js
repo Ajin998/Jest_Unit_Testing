@@ -11,6 +11,10 @@ const functions = {
     return user;
   },
   less_than: (num1, num2) => num1 + num2,
+  admin_list: () => {
+    const users = ["Ajin", "John", "Doe"];
+    return users;
+  },
 };
 
 module.exports = functions;

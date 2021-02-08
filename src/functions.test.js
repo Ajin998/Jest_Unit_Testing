@@ -48,3 +48,8 @@ test("Test for less than equals", () => {
 test("Regex for not containing I in a word", () => {
   expect("team").not.toMatch(/T/);
 });
+
+//Test for Array
+test("Whether admin is authorized or not", () => {
+  expect(functions.admin_list()).toContain("Ajin");
+});
