@@ -53,3 +53,17 @@ test("Regex for not containing I in a word", () => {
 test("Whether admin is authorized or not", () => {
   expect(functions.admin_list()).toContain("Ajin");
 });
+
+//Test for async data with promise
+test("Async data test", () => {
+  expect.assertions(1);
+  return functions.fetchUser().then((data) => {
+    expect(data.name).toBe("Leanne Graham");
+  });
+});
+
+//Test for asunc data with async/await
+test("Async data with async/await", async () => {
+  const data = await functions.fetchUser();
+  expect(data.name).toBe("Leanne Graham");
+});

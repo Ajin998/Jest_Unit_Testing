@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 const functions = {
   add: (num1, num2) => num1 + num2,
   isNull: () => null,
@@ -12,9 +14,14 @@ const functions = {
   },
   less_than: (num1, num2) => num1 + num2,
   admin_list: () => {
-    const users = ["Ajin", "John", "Doe"];
-    return users;
+    const admins = ["Ajin", "John", "Doe"];
+    return admins;
   },
+  fetchUser: () =>
+    axios
+      .get("https://jsonplaceholder.typicode.com/users/1")
+      .then((res) => res.data)
+      .catch((err) => "error while fetching data"),
 };
 
 module.exports = functions;
